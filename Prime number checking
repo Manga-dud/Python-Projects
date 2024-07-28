@@ -1,0 +1,12 @@
+'''Prime number calculation
+This code is without a while loop if wanted you can add this to your while loop
+'''
+Divisbility_status=0                                                                    #To have a count of how many numbers can divide the given number
+Prime_numberCHK=int(input('provide the number to check wether it is prime or not:'))    #taking the number to be checked 
+for num in range(2,Prime_numberCHK+1,1):                                                # to check if a number is a prime number we must check till that number ,only taking positive integers for the checking
+    if Prime_numberCHK%num ==0:                                                         #condition for divisibility
+        Divisbility_status+=1                                                           #to update the status of how many numbers divide this number
+if Divisbility_status >1:                                                               #if the Divisbility_status is 1 it is just the number itself so it is prime , other than one it is composite number
+        print(f'the given number{Prime_numberCHK} is not prime')
+elif Divisbility_status ==1 or Divisbility_status <1  :
+    print(f'the given number {Prime_numberCHK} is  prime')
